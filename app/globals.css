@@ -1,26 +1,95 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/* Minimal style tokens, matching the FigCraft design (romeo-portfolio.figcraft). */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: #fafaf9;
+  --color-surface: #ffffff;
+  --color-ink: #141414;
+  --color-muted: #646464;
+  --color-line: #e7e5e4;
+  --color-accent: #2b59ff;
+  --color-accent-hover: #1f47e0;
+  --color-chip: #f1f1ef;
+  --color-soft: #eef2ff;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, Consolas, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: #2b59ff33;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* A phone screenshot with a bezel. Width, ratio and shadow come in as custom properties
+   so one class covers every size: --pw-sm below 768px, --pw-lg from 768px up. */
+.phone {
+  --pw: var(--pw-sm);
+  position: relative;
+  flex: none;
+  width: var(--pw);
+  aspect-ratio: var(--ratio);
+  border-radius: calc(var(--pw) * 0.13);
+  outline: max(3px, calc(var(--pw) / 34)) solid var(--bezel, #101114);
+  box-shadow: 0 30px 60px -20px var(--shadow, #0e1a3640);
+  overflow: hidden;
+  background: #f5f7fb;
+}
+
+@media (min-width: 768px) {
+  .phone {
+    --pw: var(--pw-lg);
+  }
+}
+
+/* A browser-window screenshot: the same idea, with an optional max width. */
+.browser {
+  --bw: var(--bw-sm);
+  flex: none;
+  width: var(--bw);
+  max-width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow:
+    0 0 0 1px #0000000d,
+    0 30px 60px -20px var(--shadow, #1b2a5a40);
+}
+
+@media (min-width: 768px) {
+  .browser {
+    --bw: var(--bw-lg);
+  }
 }

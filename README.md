@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Romeo Parulian Marpaung · Portfolio
 
-## Getting Started
+My UI/UX portfolio: a homepage and four case studies (ZapCart, Vaya, Mellow and Atma Barbershop), built from the Minimal design in `../portfolio-templates/romeo-portfolio.figcraft`.
 
-First, run the development server:
+Built with Next.js 16 (App Router), React, TypeScript and Tailwind CSS 4. Every page is static, so it can be hosted for free on Vercel.
+
+## Run it locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Where things live
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| What | Where |
+| --- | --- |
+| Name, email, LinkedIn, GitHub, resume link, About text | `lib/site.ts` |
+| Project cards, their order, and the prototype/Figma/code links | `lib/projects.ts` |
+| Case study pages | `app/work/<project>/page.tsx` |
+| Buttons, chips and cards | `components/ui.tsx` |
+| Case study layout pieces (sections, rows, decisions, closing) | `components/case-study.tsx` |
+| Screenshots | `assets/shots/` (also listed in `lib/shots.ts`) |
+| Resume PDF | `public/Romeo-Parulian-Marpaung-CV.pdf` |
+| Vaya clickable prototype and design spec | `public/prototypes/vaya/` |
+| Social preview image and favicon | `app/opengraph-image.png`, `app/icon.svg` |
 
-## Learn More
+## Common changes
 
-To learn more about Next.js, take a look at the following resources:
+- **Add a link to a project** (for example Mellow's live prototype): add `{ label: "Open the prototype ↗", href: "https://…", external: true }` to that project's `links` in `lib/projects.ts`. The buttons appear under its "Final design" section.
+- **Change the project order**: reorder the `projects` array in `lib/projects.ts`. The homepage and the "Next project" links follow it.
+- **Replace a screenshot**: overwrite the file in `assets/shots/` with the same name.
+- **Update the resume**: replace `public/Romeo-Parulian-Marpaung-CV.pdf`. Keep it to the CV pages only, without diplomas or transcripts.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The site deploys on Vercel from the `main` branch. Every push to `main` publishes a new version.
