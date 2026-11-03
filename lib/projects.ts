@@ -60,6 +60,7 @@ export const projects: Project[] = [
     links: [
       { label: "Open the prototype ↗", href: "/prototypes/vaya/index.html", external: true },
       { label: "Read the design spec ↗", href: "/prototypes/vaya/spec.html", external: true },
+      { label: "View in Figma ↗", href: "https://www.figma.com/design/MzT7omrQoefOhiAXiEAFpK/Vaya?node-id=1-1", external: true },
     ],
   },
   {
