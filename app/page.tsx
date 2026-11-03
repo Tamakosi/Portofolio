@@ -24,8 +24,8 @@ function Hero() {
       <p className="max-w-[700px] text-[17px] leading-[1.55] text-muted md:text-[19px]">
         <strong className={b}>UI/UX designer</strong> and <strong className={b}>Information Systems</strong> graduate from{" "}
         <strong className={b}>Atma Jaya Yogyakarta University</strong>, trained at <strong className={b}>JayJay School</strong> and{" "}
-        <strong className={b}>certified in UI/UX design</strong>. Former <strong className={b}>IT Staff</strong> at{" "}
-        <strong className={b}>Medika Sangatta General Hospital</strong>. I design in <strong className={b}>Figma</strong> and build the frontend with{" "}
+        <strong className={b}>certified in UI/UX design</strong>. Former <strong className={b}>IT&nbsp;Support Intern</strong> at{" "}
+        <strong className={b}>Medika Sangatta General Hospital</strong>. I&nbsp;design in <strong className={b}>Figma</strong> and build the frontend with{" "}
         <strong className={b}>TypeScript and CSS</strong>.
       </p>
       <ul aria-label="Keywords" className="flex flex-wrap justify-center gap-2">
