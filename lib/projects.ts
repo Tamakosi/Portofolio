@@ -54,12 +54,11 @@ export const projects: Project[] = [
       "A personal project to practise end-to-end mobile design. Vaya helps travelers discover places, save favorites, and plan a trip by month, nights and travelers, all in one app.",
       "I designed every flow in Figma, built a clickable prototype in HTML, CSS and JavaScript with Claude and ChatGPT as AI partners, and wrote a design spec for its spacing, type, colour, touch and motion rules.",
     ],
-    facts: [["5 tabs", "one clear job per tab"], ["Light + dark", "theme switch built in"], ["WCAG AA", "text contrast checked at 4.5 : 1"]],
+    facts: [["5 tabs", "one clear job per tab"], ["4px grid", "one spacing scale for every screen"], ["WCAG AA", "text contrast checked at 4.5 : 1"]],
     stage: ["#E3EDFD", "#F2F6FF"],
     shadow: "#0E1A3640",
     links: [
-      { label: "Open the prototype ↗", href: "/prototypes/vaya/index.html", external: true },
-      { label: "Read the design spec ↗", href: "/prototypes/vaya/spec.html", external: true },
+      { label: "Open the prototype ↗", href: "https://www.figma.com/proto/MzT7omrQoefOhiAXiEAFpK/Vaya?node-id=1-2613&starting-point-node-id=1-2613", external: true },
       { label: "View in Figma ↗", href: "https://www.figma.com/design/MzT7omrQoefOhiAXiEAFpK/Vaya?node-id=1-1", external: true },
     ],
   },
@@ -77,8 +76,10 @@ export const projects: Project[] = [
     facts: [["4 steps", "Prompt → Outline → Design → Export"], ["12 screens", "from landing page to brand kit"], ["3 breakpoints", "phone, tablet and desktop"]],
     stage: ["#E4EFE6", "#F4F6F0"],
     shadow: "#1F3A2A40",
-    // The prototype and Figma links go here once Mellow is deployed and the design is shared.
-    links: [],
+    links: [
+      { label: "Open the prototype ↗", href: "https://mellow-romeo.vercel.app/", external: true },
+      { label: "View the code ↗", href: "https://github.com/Tamakosi/Mellow", external: true },
+    ],
   },
   {
     slug: "atma-barbershop",

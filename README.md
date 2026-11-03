@@ -24,7 +24,6 @@ Then open http://localhost:3000.
 | Case study layout pieces (sections, rows, decisions, closing) | `components/case-study.tsx` |
 | Screenshots | `assets/shots/` (also listed in `lib/shots.ts`) |
 | Resume PDF | `public/Romeo-Parulian-Marpaung-CV.pdf` |
-| Vaya clickable prototype and design spec | `public/prototypes/vaya/` |
 | Social preview image and favicon | `app/opengraph-image.png`, `app/icon.svg` |
 
 ## Common changes

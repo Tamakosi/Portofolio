@@ -64,7 +64,7 @@ export default function Vaya() {
             A clickable prototype with trip planning, reviews, a mock booking flow and full sign-in with guest mode, plus a written design spec.
           </TextCard>
         </Row>
-        <Facts items={[["5 tabs", "one clear job per tab"], ["Light + dark", "every colour has both values"], ["4px grid", "one spacing scale for every screen"]]} />
+        <Facts items={[["5 tabs", "one clear job per tab"], ["4px grid", "one spacing scale for every screen"], ["WCAG AA", "text contrast checked at 4.5 : 1"]]} />
         <RoleBox
           items={[
             ["My role", "UI/UX Designer & frontend prototyper"],
@@ -81,7 +81,7 @@ export default function Vaya() {
             &ldquo;Help me find a place I&apos;ll love, know when to go, and plan it without juggling five apps.&rdquo;
           </TextCard>
           <TextCard title="My practice goal" accent>
-            Design a complete mobile system, with one spacing scale, one type scale and light and dark colour tokens, and use it the same way on every screen.
+            Design a complete mobile system, with one spacing scale, one type scale and one set of colour tokens, and use it the same way on every screen.
           </TextCard>
         </Row>
       </Section>
@@ -126,8 +126,8 @@ export default function Vaya() {
           </div>
         </div>
         <Why>
-          colour should never be the only clue, and it should never be ambiguous. I gave each meaning its own token with a light and a dark value, checked each one&apos;s contrast, and drew empty
-          stars as outlines so filled versus empty never relies on colour.
+          colour should never be the only clue, and it should never be ambiguous. I gave each meaning its own colour token, checked each one&apos;s contrast, and drew empty stars as outlines so
+          filled versus empty never relies on colour.
         </Why>
       </Section>
 
@@ -139,8 +139,8 @@ export default function Vaya() {
           <Iteration shot="vaya-home" alt="Vaya version 2: the five-tab home screen with a blue accent" title="V2: Five-tab prototype">
             Roboto and Inter, a blue accent, real photos, and every tab wired up: Home, Explore, Trips, Favorites, Profile.
           </Iteration>
-          <Iteration shot="vaya-home-dark" alt="Vaya version 3: the home screen in dark mode" title="V3: Reviewed and polished">
-            Design-review passes added dark mode, sign-in and guest mode, clearer colour roles, and back navigation that closes sheets.
+          <Iteration shot="vaya-login" alt="Vaya version 3: the log-in screen with a guest mode option" title="V3: Reviewed and polished">
+            Design-review passes added sign-in and guest mode, clearer colour roles, and back navigation that closes sheets.
           </Iteration>
         </Row>
       </Section>
@@ -162,8 +162,8 @@ export default function Vaya() {
             [
               ["vaya-explore", "Explore", "Vaya Explore tab with search and filters"],
               ["vaya-trips", "Trips", "Vaya Trips tab with planned trips"],
-              ["vaya-detail-dark", "Detail · dark", "Vaya destination detail in dark mode"],
-              ["vaya-login", "Log in", "Vaya log-in screen with a guest mode option"],
+              ["vaya-detail", "Destination", "Vaya destination detail screen for Santorini, Greece"],
+              ["vaya-profile", "Profile", "Vaya Profile tab with trips, favorites and account settings"],
             ] as [ShotKey, string, string][]
           ).map(([shot, cap, alt]) => (
             <Captioned key={shot} caption={cap}>

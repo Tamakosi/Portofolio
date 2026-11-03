@@ -29,10 +29,8 @@ import mellowPhoneMel from "@/assets/shots/mellow-phone-mel.png";
 import mellowPhoneOutline from "@/assets/shots/mellow-phone-outline.png";
 import mellowSettings from "@/assets/shots/mellow-settings.png";
 import santoriniV1 from "@/assets/shots/santorini-v1.png";
-import vayaDetailDark from "@/assets/shots/vaya-detail-dark.png";
 import vayaDetail from "@/assets/shots/vaya-detail.png";
 import vayaExplore from "@/assets/shots/vaya-explore.png";
-import vayaHomeDark from "@/assets/shots/vaya-home-dark.png";
 import vayaHome from "@/assets/shots/vaya-home.png";
 import vayaLogin from "@/assets/shots/vaya-login.png";
 import vayaPlan from "@/assets/shots/vaya-plan.png";
@@ -86,10 +84,8 @@ export const shots = {
   "mellow-phone-outline": mellowPhoneOutline,
   "mellow-settings": mellowSettings,
   "santorini-v1": santoriniV1,
-  "vaya-detail-dark": vayaDetailDark,
   "vaya-detail": vayaDetail,
   "vaya-explore": vayaExplore,
-  "vaya-home-dark": vayaHomeDark,
   "vaya-home": vayaHome,
   "vaya-login": vayaLogin,
   "vaya-plan": vayaPlan,
